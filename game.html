@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Jeu | Stars Clicker</title>
+    <link href="css/game.css" rel="stylesheet">
+</head>
+<body>
+    <div id="main">
+        <div id="nombre">
+            <h1>Nombre d'étoiles</h1>
+            <h2 id='compteur'></h2>
+        </div>
+        <div id="planete" onclick="addstars()"><img draggable="false" id='planete-image' src='ressources/image/terre.png'></div>
+        <div id="left-menu">
+                <div class="left-menu-content-open" id="left-menu-content">
+                    <h1>j'écris des conneries ici</h1>
+                </div>
+                <div id="left-menu-button" onclick="menuopen('left')">
+                    <img src="">
+                </div>
+        </div>
+        <div id="left-bottom-menu" class="left-bottom-menu-open">
+            <div id="left-bottom-menu-button" onclick="menuopen('left-bottom')"><h2>Succès</h2></div>
+            <div class="achievement-locked" id="10">
+                <img src="https://via.placeholder.com/100" alt="">
+                <div>
+                    <h3>Un départ prometteur</h3>
+                    <h5>Vous avez récolté vos 10 première étoiles</h5>
+                </div>
+            </div>
+            <div class="achievement-locked" id="1000">
+                <img src="https://via.placeholder.com/100" alt="">
+                <div>
+                    <h3>En route vers les étoiles</h3>
+                    <h5>Vous avez atteint un score de 1000 étoile</h5>
+                </div>
+            </div>
+            <div class="achievement-locked" id="100000">
+                <img src="https://via.placeholder.com/100" alt="">
+                <div>
+                    <h3>Hyper-espace</h3>
+                    <h5>Vous avez atteint un score de 100000 étoiles</h5>
+                </div>
+            </div>
+            <div class="achievement-locked" id="bonus1">
+                <img src="https://via.placeholder.com/100" alt="">
+                <div>
+                    <h3>La première de beaucoup</h3>
+                    <h5>Vous avez acquis votre première amélioration</h5>
+                </div>
+            </div>
+        </div>
+        <div id="right-menu">
+            <div class="amelio" id="terre" onclick="divopen('terre')"><h1>Planète terre</h1></div>
+            <div class="amelio-open" id="terre-inter">
+                <div class="amelio-item" id="" onclick="terrenavion()">
+                    <img src="https://via.placeholder.com/100">
+                    <div class="amelio-text">
+                    <h1 class="amelio-name">N'avion</h1>
+                    <h2 class="amelio-price" id="terre-navion-price">100</h2>
+                    </div>
+                    <h6 class="amelio-owned" id="terre-navion-owned">0</h6>
+                </div>
+                <div class="amelio-item" id="" onclick="terresatelite()">
+                    <img src="https://via.placeholder.com/100">
+                    <div class="amelio-text">
+                    <h1 class="amelio-name">Satelite</h1>
+                    <h2 class="amelio-price" id="terre-satelite-price"></h2>
+                    </div>
+                    <h6 class="amelio-owned" id="terre-satelite-owned"></h6>
+                </div>
+                <div class="amelio-item" id="" onclick="terrefusee()">
+                    <img src="https://via.placeholder.com/100">
+                    <div class="amelio-text">
+                    <h1 class="amelio-name">Fusée</h1>
+                    <h2 class="amelio-price" id="terre-fusee-price"></h2>
+                    </div>
+                    <h6 class="amelio-owned" id="terre-fusee-owned"></h6>
+                </div>
+            </div>
+            <div class="amelio" id="jupiter" onclick="divopen('jupiter')"><h1>Planète Jupiter</h1></div>
+            <div class="amelio-open" id="jupiter-inter">
+                <div class="amelio-item" id="jupiter-navion" onclick="jupiternavion()">
+                    <img src="https://via.placeholder.com/100">
+                    <div class="amelio-text">
+                        <h1 class="amelio-name">N'avion</h1>
+                        <h2 class="amelio-price" id="jupiter-navion-price"></h2>
+                    </div>
+                    <h6 class="amelio-owned" id="jupiter-navion-owned"></h6>
+                </div>
+                <div class="amelio-item" id="" onclick="terresatelite(jupiter)">
+                    <img src="https://via.placeholder.com/100">
+                    <div class="amelio-text">
+                    <h1 class="amelio-name">Satelite</h1>
+                    <h2 class="amelio-price" id="jupiter-satelite-price"></h2>
+                    </div>
+                    <h6 class="amelio-owned" id="jupiter-satelite-owned"></h6>
+                </div>
+                <div class="amelio-item" id="" onclick="jupiterfusee()">
+                    <img src="https://via.placeholder.com/100">
+                    <div class="amelio-text">
+                    <h1 class="amelio-name">Fusée</h1>
+                    <h2 class="amelio-price" id="jupiter-fusee-price"></h2>
+                    </div>
+                    <h6 class="amelio-owned" id="jupiter-fusee-owned"></h6>
+                </div>
+            </div>
+        </div>
+        <div id="div-skin">
+            <img src="ressources/image/terre.png" alt="planete terre" onclick="changeskin('terre')">
+            <img src="ressources/image/jupiter.png" alt="jupiter" onclick="changeskin('jupiter')">
+        </div>
+    </div>
+    <script src="js/game.js"></script>
+</body>
+</html>

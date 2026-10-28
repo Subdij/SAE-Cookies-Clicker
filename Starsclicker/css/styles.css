@@ -1,0 +1,225 @@
+*, ::before, ::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-image: url('../images/fond.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.grid1{
+    height: 48vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.position-title{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+    font-size: 50px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: lighter;
+}
+
+.position-fusee{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid2{
+    height: 50vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#terre{
+    margin-top: -20%;
+    margin-left: -30%;
+    width: 100%;
+}
+
+.position-planet{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p{
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+}
+
+#lune{
+    width: 100%;
+    margin-left: 35%;
+    margin-top: 10%;
+}
+
+.position-formulaire{
+    text-align: center;
+}
+
+#username{
+    height: 40px;
+    width: 280px;
+    border-radius: 5px;
+    border: none;
+    margin: 30px;
+}
+
+#fusee{
+    width: 300px;
+}
+
+button{
+    background-color: #3F85B6;
+    color: white;
+    border: none;
+    width: 140px;
+    height: 45px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: transform .5s;
+}
+
+button:hover{
+    transform: scale(1.2);
+}
+
+.button-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-control{
+    padding: 5px;
+}
+
+@media (max-width: 1075px){
+    button{
+        width: 100px;
+        font-size: small;
+        font-weight: bold;
+    }
+    .position-fusee{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #fusee{
+        width: 250px;
+    }
+    body{
+        height: 100vh;
+    }
+    .grid1{
+        height: 50vh;
+    }
+    #terre{
+        width: 80%;
+    }
+    h1{
+        font-size: 50px;
+    }
+    p{
+        font-size: small;
+    }
+}
+
+@media (max-width: 942px){
+    #username{
+        width: 180px;
+    }
+}
+
+@media (max-width: 842px){
+    h1{
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 763px){
+    h1{
+        font-size: 25px;
+    }
+    #terre{
+        width: 60%;
+    }
+    #fusee{
+        width: 200px;
+    }
+}
+
+@media(max-width: 588px){
+    h1{
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 576px){
+    .grid1{
+        height: 20vh;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+    }
+    #terre{
+        margin-top: -58%;
+        margin-left: 2%;
+        width: 100%;
+    }
+    #fusee{
+        visibility: hidden;
+    }
+    h1{
+        font-size: 80px;
+        display: flex; 
+    }
+    .grid2{
+        height: 30vh;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .position-fusee{
+        visibility: hidden;
+    }
+    .form{
+        grid-row: 1;
+    }
+    button{
+        width: 150px;
+    }
+    .button-center{
+        margin-left: -2%;
+    }
+    #lune{
+        width: 50%;
+    }
+}
+
+@media (max-width: 500px){
+    h1{
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 364px){
+    h1{
+        font-size: 50px;
+    }
+}

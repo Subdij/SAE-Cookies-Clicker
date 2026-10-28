@@ -1,0 +1,327 @@
+/* Main */
+
+body,html{width:100%;height:100%;margin:0;padding:0;}
+
+#main{
+    background-image: url(../images/fond.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #242424;
+    width:100%;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color:white;
+    overflow: hidden;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Cookies */
+
+#planete{
+    width:500px;
+    height: 500px;
+    transition: 2s;
+}
+
+#planete>img{
+    width:100%;
+    height: 100%;
+}
+
+#planete:hover{
+    scale: 1.05;
+}
+
+/* Menus */
+
+#left-menu{
+    position: absolute;
+    top:0px;
+    left:0px;
+    width:20%;
+    z-index: 5;
+    background-color: #242424;           
+}
+
+.left-menu-open{
+    width:20%;
+    height:50%;
+    transition: 2s;          
+}
+
+.left-menu-closed{
+    height:0%;
+    transition: 2s;        
+}
+
+.left-menu-closed *{
+    display:none;
+}
+
+.left-menu-open *{
+    display:none;
+}
+
+.left-menu-content-open{
+    background-color: rgba(255,255,255,0.3);
+    height: 100%;
+    width: 100%;
+    transition: 1s;
+    z-index: 10;
+}
+
+.left-menu-content-open *{
+    opacity: 1;
+    display: visible;
+    transition: 1s;
+    margin: 0;
+}
+
+.left-menu-content-closed{
+    background-color: rgba(255,255,255,0.3);
+    height: 0%;
+    width: 100%;
+    transition: 1s;
+}
+
+.left-menu-content-closed *{
+    opacity: 0;
+    display: none;
+    transition: 1s;
+}
+
+#left-menu-button{
+    align-self: flex-end;
+    background-color: rebeccapurple;
+    width: 100%;
+    height:5%;
+}
+
+.left-bottom-menu-open{
+    background-color: #242424;
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    width:20%;
+    height:40%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: scroll;
+    transition: 2s;
+}
+
+.left-bottom-menu-closed{
+    background-color: #242424;
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    width:20%;
+    height:10%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transition: 2s;
+}
+
+.left-bottom-menu-closed .achievement-locked{
+    transition: 2s;
+    opacity: 0;
+    display: none;
+}
+
+.left-bottom-menu-open .achievement-locked{
+    transition: 2s;
+    opacity: 1;
+}
+
+#left-bottom-menu-button{
+    width:100%;
+    height: 20%;
+}
+
+legend{
+    grid-row: 1;
+    font-weight: bold;
+    text-align: center;
+    font-size: x-large;
+}
+ 
+  .sound_label{
+    font-weight: bold;
+    font-size: x-large;
+    display: flex;
+    align-items: center;
+    margin: 10px;
+  }
+  .music_label{
+    grid-row: 3;
+    font-weight: bold;
+    font-size: x-large;
+    display: flex;
+    align-items: center;
+    margin: 10px;
+  }
+
+.achievement-locked{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+    background-color: #552929c5;
+    margin-bottom: 5px;
+}
+
+.achievement-locked>img{
+    width:20%;
+    height: auto;
+}
+
+.achievement-locked h3,.achievement-locked h5{
+    margin:5px;
+}
+
+.achievement-locked>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 10%;
+}
+
+#right-menu{
+    position: absolute;
+    top:5%;
+    right:0;
+    width:30%;
+    height:90%;
+    background-color: #242424;
+    transition: 1s;
+    display: flex;
+    flex-direction: column;
+    padding:10px;
+    overflow-y: scroll;
+}
+
+/* Améliorations */
+
+.amelio{
+    width:100%;
+    background-color: rgba(255,255,255,0.1);
+    height:10%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.amelio-open{
+    width:100%;
+    height:50%;
+    background-color: rgba(255,255,255,0.2);
+    transition: 1s;
+}
+
+.amelio-open *{
+    display: visible;
+    opacity: 1;
+    transition: 1s;
+}
+
+.amelio-close{
+    width:100%;
+    height:0%;
+    background-color: rgba(255,255,255,0.2);
+    transition: 1s;
+}
+
+.amelio-close *{
+    opacity: 0;
+    display: none;
+    transition: 1s;
+}
+
+.amelio-item{
+    display: flex;
+    align-items: center;
+    background-color: rgba(255,255,255,0.2);
+    width: 100%;
+    height: 20%;
+    margin-top: 10px;
+}
+
+.amelio-item>img{
+    height:100%;
+    width:auto;
+}
+
+.amelio-item h1, .amelio-item h2, .amelio-item h6{
+    margin: 0;
+    padding: 0;
+}
+
+.amelio-text{
+    display: flex;
+    flex-direction: column;
+    color:white;
+}
+
+.amelio-name{
+    font-size: 30px;
+}
+
+.amelio-price{
+    font-size: small;
+}
+
+.amelio-owned{
+    position: absolute;
+    right: 12px;
+    font-size: 10vh; 
+    filter:opacity(0.5);
+}
+
+/* Skins */
+
+#div-skin{
+    position: absolute;
+    background-color: #242424;
+    width:30%;
+    height:10%;
+    bottom: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#div-skin>img{
+    height:100%;
+    width:auto;
+}
+
+@media (max-width: 1268px){
+    #planete{
+        width:300px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 860px){
+    #planete{
+        width:200px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 756px){
+   h1{
+    font-size: large;
+   }
+   #div-skin>img{
+    height:50%;
+    width:25%;
+}
+}
